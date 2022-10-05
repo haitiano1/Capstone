@@ -3,34 +3,50 @@
     padding: 0;
     box-sizing: border-box;
 }
-body, html {
+
+body,
+html {
     margin: 0;
     padding: 0;
     background: #fff;
     color: #707070;
     font-family: 'Montserrat', sans-serif;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    transition: all 0.5s;
+}
+
 .container {
     max-width: 1200px;
     margin: auto;
 }
+
 .section-pt {
     padding-top: 115px;
 }
+
 .title p {
     font-size: 40px;
     line-height: 50px;
     font-weight: 600;
     position: relative;
 }
+
 .title p::before {
     left: -20px;
     bottom: -8px;
 }
+
 .title p::after {
     left: 20px;
     bottom: -15px;
 }
+
 .title p::before,
 .title p::after {
     content: "";
@@ -40,4 +56,290 @@ body, html {
     position: absolute;
     right: 0;
     margin: 0 auto;
+}
+
+/* SUB NAV */
+.sub-nav {
+    display: flex;
+    color: #fff;
+    background-color: #0d369f;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 30px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.sub-nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.sub-nav .contact a:nth-child(2) {
+    margin: 0 25px;
+}
+
+.sub-nav .icon a {
+    margin-left: 20px;
+}
+
+/* Nav bar */
+
+header{
+    position:sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    z-index: 100;
+    background-color: #fff;
+
+}
+.navbar{
+
+}
+.navbar-brand span {
+    font-size: 26px;
+    color: #0D369F;
+    font-weight: 550;
+}
+
+#portNavbar .nav-item a {
+    font-weight: 600;
+    color: #333;
+}
+
+#portNavbar .nav-link:hover {
+    color: #ff7971;
+    transition: all 0.3s;
+}
+
+#portNavbar .nav-item.active .nav-link {
+    color: #ff6e65;
+}
+
+.navbar form {
+    width: 230px;
+    padding-left: 12px;
+}
+
+.d-flex {
+    position: relative;
+    align-items: center;
+    /* padding-right: 15px; */
+    /* border: none; */
+}
+
+
+#portNavbar .btn-search i {
+    position: absolute;
+    color: #0D369F;
+    right: 20px;
+    top: 0;
+    padding: 9px 12px 8px 2px;
+}
+
+.btn-mode {    
+    border: none;
+    margin-left: 10px;
+    background-color: #fff;
+    color: #0D369F;
+}
+.night-mode{
+    font-size: 20px;
+}
+
+#portNavbar .navbar-nav .night-mode {
+    padding-left: 12px;
+    font-size: 24px;
+    line-height: 38px;
+}
+
+/* Carousel */
+.portCarousel .carousel-item img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    /* height: 100vh; */
+    object-fit: cover;
+    filter: brightness(0.5);
+    
+}
+.portCarousel .carousel-indicators li{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-bottom: -15px;
+}
+.carousel-indicators {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 15;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    margin-right: 2%;
+    list-style: none;
+    align-content: stretch;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    flex-direction: column-reverse;
+}
+.carousel-inner .carousel-caption{
+    text-align: left;
+    max-width: 600px;
+    font-size: 75px;
+    font-weight: bold;
+    line-height: 80px;
+    padding-bottom: 30px;
+    width: 50%;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    height: 50vh;
+}
+.carousel-item button{
+    font-weight: 600;
+    font-size: 16px;
+}
+.carousel-item button:hover{
+    background-color: #ff6e65;
+    color: #fff;
+    transition: 0.3s ease-out;
+}
+
+/* services */
+.services{
+    color: #fff;
+    position: relative;
+    bottom: 60px;
+}
+.card {
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 50px 30px;
+    border-radius: 8px;
+}
+.services .card:nth-child(1){
+    background-color: #ff4f81;
+}
+.services .card i{
+    font-size: 45px;
+}
+.services .card-title{
+    margin-top: 25px;
+    display: block;
+    font-weight: 600;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.8s;
+}
+.services .card-title:hover{
+    color: #333;
+}
+.card-body{
+    padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVE */
+@media screen and (max-width:991.98px){
+/* NAV */
+    .sub-nav{
+        display: none;
+    }
+    header.nav-fixed {
+        height: auto;
+        padding: 0;
+        text-align: center;
+    }
+    .d-flex{
+        margin: 0 auto;
+    }
+    .navbar-toggler{
+        background-color: #0d369f;
+    }
+    /* #portNavbar .span{
+        color: #fff;
+    } */
+    .dropdown-menu{
+        text-align: center; 
+        border: none;
+    }
+    .carousel-inner .carousel-caption{
+        font-size: 50px;
+        line-height: 60px;
+        padding: 110px 40px;
+    }
+    .card-item{
+        margin-bottom: 20px;
+    }
+    
+
+/* services */
+
+}
+
+
+
+@media (max-width: 768px){
+    .carousel-inner .carousel-caption{
+        font-size: 45px;
+        line-height: 55px;
+        margin: 20px 20px;
+    }
+    .carousel-item button{
+        font-size: 12px;
+    }
+    .portCarousel .carousel-item img{
+        height: 50vh;
+    }
+    .card-item{
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px){
+    .carousel-inner .carousel-caption{
+        font-size: 30px;
+        line-height: 45px;
+        margin: -40px 80px;
+        width: 100%;
+    }
+    
 }
