@@ -35,6 +35,7 @@ body {
     line-height: 50px;
     font-weight: 600;
     position: relative;
+    color: #333;
 }
 
 .title p::before {
@@ -56,6 +57,10 @@ body {
     position: absolute;
     right: 0;
     margin: 0 auto;
+}
+
+.title span {
+    color: #ff6e65;
 }
 
 /* SUB NAV */
@@ -85,8 +90,8 @@ body {
 
 /* Nav bar */
 
-header{
-    position:sticky;
+header {
+    position: sticky;
     top: 0;
     right: 0;
     left: 0;
@@ -95,9 +100,9 @@ header{
     background-color: #fff;
 
 }
-.navbar{
 
-}
+.navbar {}
+
 .navbar-brand span {
     font-size: 26px;
     color: #0D369F;
@@ -123,6 +128,11 @@ header{
     padding-left: 12px;
 }
 
+.navbar-icon {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
 .d-flex {
     position: relative;
     align-items: center;
@@ -134,18 +144,23 @@ header{
 #portNavbar .btn-search i {
     position: absolute;
     color: #0D369F;
-    right: 20px;
+    right: 40px;
     top: 0;
     padding: 9px 12px 8px 2px;
 }
 
-.btn-mode {    
+.btn-mode, .btn-mode-icon {
     border: none;
     margin-left: 10px;
     background-color: #fff;
     color: #0D369F;
 }
-.night-mode{
+
+.btn-mode-icon {
+    margin-right: 10px;
+}
+
+.night-mode {
     font-size: 20px;
 }
 
@@ -164,14 +179,16 @@ header{
     /* height: 100vh; */
     object-fit: cover;
     filter: brightness(0.5);
-    
+
 }
-.portCarousel .carousel-indicators li{
+
+.portCarousel .carousel-indicators li {
     width: 10px;
     height: 10px;
     border-radius: 50%;
     margin-bottom: -15px;
 }
+
 .carousel-indicators {
     position: absolute;
     right: 0;
@@ -188,7 +205,8 @@ header{
     justify-content: space-evenly;
     flex-direction: column-reverse;
 }
-.carousel-inner .carousel-caption{
+
+.carousel-inner .carousel-caption {
     text-align: left;
     max-width: 600px;
     font-size: 75px;
@@ -201,22 +219,29 @@ header{
     transform: translate(-50%, -50%);
     height: 50vh;
 }
-.carousel-item button{
+
+.carousel-item button {
     font-weight: 600;
     font-size: 16px;
 }
-.carousel-item button:hover{
+
+.carousel-item button:hover {
     background-color: #ff6e65;
     color: #fff;
     transition: 0.3s ease-out;
 }
 
+.portCarousel .active {
+    background-color: #e62b4a;
+}
+
 /* services */
-.services{
+.services {
     color: #fff;
     position: relative;
     bottom: 60px;
 }
+
 .card {
     max-width: 1200px;
     margin-right: auto;
@@ -224,13 +249,16 @@ header{
     padding: 50px 30px;
     border-radius: 8px;
 }
-.services .card:nth-child(1){
+
+.services .card:nth-child(1) {
     background-color: #ff4f81;
 }
-.services .card i{
+
+.services .card i {
     font-size: 45px;
 }
-.services .card-title{
+
+.services .card-title {
     margin-top: 25px;
     display: block;
     font-weight: 600;
@@ -238,13 +266,185 @@ header{
     cursor: pointer;
     transition: all 0.8s;
 }
-.services .card-title:hover{
+
+.services .card-title:hover {
     color: #333;
 }
-.card-body{
+
+.card-body {
     padding: 0;
 }
 
+/* Studious */
+.studious__card {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.studious__item i {
+    padding: 20px;
+    border-radius: 50%;
+    background-color: rgb(13 54 159 / 9%);
+    ;
+    text-align: center;
+    color: #0d369f;
+    font-weight: 600;
+}
+
+.studious__item h2 {
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 600;
+    padding: 10px 0;
+    color: #333;
+}
+
+/* Course */
+.course__card{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: left;
+}
+.item {
+    border: none;
+    width: 33.33333%;
+    padding: 15px 15px;
+}
+
+.course .item:hover {
+    box-shadow: 0 5px 10px 0 rgb(0 0 0 / 10%);
+    transition: all 0.3s;
+}
+
+.card-img {
+    position: relative;
+}
+
+.course .card-img img {
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.course .item .price {
+    position: absolute;
+    right: 10%;
+    bottom: -7%;
+    border-radius: 50%;
+    background-color: #ff6e65;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.course .item .tag {
+    position: absolute;
+    top: 8%;
+    left: 8%;
+    display: flex;
+    align-items: center;
+}
+
+.course .item .tag a {
+    font-size: 12px;
+    font-weight: 500;
+    color: #ffffff;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.tag-color-1 {
+    background-color: #ffa100;
+    margin-right: 10px;
+}
+
+.tag-color-2 {
+    background-color: #1dc295;
+}
+.signal{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* d-flex align-items-center justify-content-between */
+}
+
+.course .signal span {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.course .signal span i {
+    color: #ff6e65;
+}
+
+.vote{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.course .vote {
+    border-top: 1px solid #eeeeee;
+}
+
+.course .vote .star-i {
+    color: #ffc949;
+    font-size: 14px;
+}
+
+.course .vote a {
+    color: #ff6e65;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.course .vote a:hover {
+    color: #0d369f;
+    transition: all 0.5s;
+}
+
+.course .card-info .card-heading {
+    color: #333;
+    font-size: 22px;
+    margin-bottom: 10px;
+    display: block;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.course .card-info .card-heading:hover {
+    color: #ff6e65;
+    transition: all 0.3s;
+}
+.btn-course{
+    margin: 0 auto;
+}
+.course .course-btn {
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 28px;
+    background-color: #ff6e65;
+    border-radius: 6px;
+    border: none;
+    transition: all 0.5s;
+}
+
+.course .course-btn:hover {
+    background-color: #0d369f;
+}
+.vote a{
+    text-decoration: none;
+}
 
 
 
@@ -278,68 +478,87 @@ header{
 
 
 /* RESPONSIVE */
-@media screen and (max-width:991.98px){
-/* NAV */
-    .sub-nav{
+@media screen and (max-width:991.98px) {
+
+    /* NAV */
+    .sub-nav {
         display: none;
     }
+
     header.nav-fixed {
         height: auto;
         padding: 0;
         text-align: center;
     }
-    .d-flex{
+
+    .d-flex {
         margin: 0 auto;
     }
-    .navbar-toggler{
+
+    .navbar-toggler {
         background-color: #0d369f;
     }
+
     /* #portNavbar .span{
         color: #fff;
     } */
-    .dropdown-menu{
-        text-align: center; 
+    .dropdown-menu {
+        text-align: center;
         border: none;
     }
-    .carousel-inner .carousel-caption{
+
+    .carousel-inner .carousel-caption {
         font-size: 50px;
         line-height: 60px;
         padding: 110px 40px;
     }
-    .card-item{
+
+    .card-item {
         margin-bottom: 20px;
     }
-    
 
-/* services */
+
+    /* studious*/
+
+
+
 
 }
 
 
 
-@media (max-width: 768px){
-    .carousel-inner .carousel-caption{
+@media (max-width: 768px) {
+
+    /* Carousel */
+    .carousel-inner .carousel-caption {
         font-size: 45px;
         line-height: 55px;
         margin: 20px 20px;
     }
-    .carousel-item button{
+
+    .carousel-item button {
         font-size: 12px;
     }
-    .portCarousel .carousel-item img{
+
+    .portCarousel .carousel-item img {
         height: 50vh;
     }
-    .card-item{
+
+    .card-item {
         margin-bottom: 20px;
     }
+
+    /* Studious*/
+
+
 }
 
-@media (max-width: 576px){
-    .carousel-inner .carousel-caption{
+@media (max-width: 576px) {
+    .carousel-inner .carousel-caption {
         font-size: 30px;
         line-height: 45px;
         margin: -40px 80px;
         width: 100%;
     }
-    
+
 }
