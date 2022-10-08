@@ -30,7 +30,8 @@ body {
     padding-top: 115px;
 }
 
-.title p {
+.title h2 {
+    text-align: center;
     font-size: 40px;
     line-height: 50px;
     font-weight: 600;
@@ -38,18 +39,18 @@ body {
     color: #333;
 }
 
-.title p::before {
+.title h2::before {
     left: -20px;
     bottom: -8px;
 }
 
-.title p::after {
+.title h2::after {
     left: 20px;
     bottom: -15px;
 }
 
-.title p::before,
-.title p::after {
+.title h2::before,
+.title h2::after {
     content: "";
     background: #b7b7b7;
     width: 60px;
@@ -61,6 +62,12 @@ body {
 
 .title span {
     color: #ff6e65;
+}
+
+.title p {
+    padding-top: 15px;
+    text-align: center;
+
 }
 
 /* SUB NAV */
@@ -149,7 +156,9 @@ header {
     padding: 9px 12px 8px 2px;
 }
 
-.btn-mode, .btn-mode-icon {
+.btn-search,
+.btn-mode-icon,
+.btn-mode {
     border: none;
     margin-left: 10px;
     background-color: #fff;
@@ -157,7 +166,8 @@ header {
 }
 
 .btn-mode-icon {
-    margin-right: 10px;
+    margin-right: 15px;
+    display: none;
 }
 
 .night-mode {
@@ -302,7 +312,7 @@ header {
 }
 
 /* Course */
-.course__card{
+.course__card {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -310,6 +320,7 @@ header {
     justify-content: space-between;
     text-align: left;
 }
+
 .item {
     border: none;
     width: 33.33333%;
@@ -371,7 +382,8 @@ header {
 .tag-color-2 {
     background-color: #1dc295;
 }
-.signal{
+
+.signal {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -387,11 +399,12 @@ header {
     color: #ff6e65;
 }
 
-.vote{
+.vote {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 .course .vote {
     border-top: 1px solid #eeeeee;
 }
@@ -425,26 +438,144 @@ header {
     color: #ff6e65;
     transition: all 0.3s;
 }
-.btn-course{
+
+.btn-course {
     margin: 0 auto;
 }
+
 .course .course-btn {
-    margin-top: 30px;
+    margin: 30px 0 100px;
     font-size: 16px;
     font-weight: 500;
     padding: 12px 28px;
     background-color: #ff6e65;
     border-radius: 6px;
     border: none;
+    color: #fff;
     transition: all 0.5s;
 }
 
 .course .course-btn:hover {
     background-color: #0d369f;
 }
-.vote a{
+
+.vote a {
     text-decoration: none;
 }
+
+/* benefit */
+.benefit {
+    background: url(../img/bg3.jpg) no-repeat bottom;
+    background-size: cover;
+    -webkit-background-size: cover;
+    padding-bottom: 50px;
+}
+
+.benefit__card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* .benefit__content{
+    
+} */
+.benefit__item {
+    display: flex;
+    padding: 30px;
+    border-radius: 8px;
+    background-color: #fff;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.benefit__item i {
+    color: #0d369f;
+    font-size: 28px;
+    background: rgb(13 54 159 / 9%);
+    width: 65px;
+    height: 66px;
+    line-height: 65px;
+    border-radius: 50%;
+    text-align: center;
+    margin-right: 18px;
+}
+
+.benefit__item .benefit__info h3 {
+    font-size: 20px;
+    line-height: 30px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.benefit__item .benefit__info p {
+    font-size: 16px;
+    line-height: 28px;
+    color: #707070;
+    letter-spacing: .4px;
+}
+
+/* NUMBER */
+.number__content {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.number__item .counter {
+    font-size: 46px;
+    font-weight: 600;
+}
+
+.number__item {
+    border-right: 1px solid #eee;
+}
+
+.number__item p {
+    color: #333;
+}
+
+/* feedback */
+.feedback__content {
+    margin-top: 50px;
+}
+
+.feedback__sub {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 20px 62px rgb(4 20 69 / 10%);
+    padding: 30px;
+}
+
+.sub-test q::before {
+    font-size: 50px;
+    color: #ff6e65;
+    line-height: .8;
+    padding-top: 8px;
+    display: inline-block;
+}
+
+.feedback__info {
+    display: flex;
+    margin-top: 25px;
+}
+
+.feedback__avt img {
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.feedback__user p {
+    font-weight: 600;
+    line-height: 16px;
+    font-size: 20px;
+    color: #333;
+}
+
+.feedback__user span {
+    font-size: 13px;
+}
+
 
 
 
@@ -505,6 +636,27 @@ header {
     .dropdown-menu {
         text-align: center;
         border: none;
+    }
+
+    .btn-mode {
+        display: none;
+    }
+
+    .btn-mode-icon {
+        display: block;
+    }
+
+    .navbar form {
+        width: 200px;
+    }
+
+    #portNavbar .btn-search i {
+        right: 16px;
+        top: 2px;
+    }
+
+    .carousel-indicators {
+        bottom: 60px;
     }
 
     .carousel-inner .carousel-caption {
