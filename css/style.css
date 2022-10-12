@@ -21,6 +21,10 @@ body {
     transition: all 0.5s;
 }
 
+li {
+    list-style: none;
+}
+
 .container {
     max-width: 1200px;
     margin: auto;
@@ -108,7 +112,6 @@ header {
 
 }
 
-.navbar {}
 
 .navbar-brand span {
     font-size: 26px;
@@ -151,7 +154,7 @@ header {
 #portNavbar .btn-search i {
     position: absolute;
     color: #0D369F;
-    right: 40px;
+    right: 15px;
     top: 0;
     padding: 9px 12px 8px 2px;
 }
@@ -297,7 +300,6 @@ header {
     padding: 20px;
     border-radius: 50%;
     background-color: rgb(13 54 159 / 9%);
-    ;
     text-align: center;
     color: #0d369f;
     font-weight: 600;
@@ -577,21 +579,24 @@ header {
 }
 
 /* instructors */
-.instructors__content{
+.instructors__content {
     margin-top: 70px;
 }
-.instructors__bg{
+
+.instructors__bg {
     box-shadow: 0 20px 62px rgb(4 20 69 / 10%);
     padding: 10px;
     background: #fff;
     border-radius: 8px;
 }
+
 .instructors__img {
     position: relative;
     overflow: hidden;
     cursor: pointer;
 }
-.instructors__img img{
+
+.instructors__img img {
     width: 100%;
     border-radius: 8px 8px 0 0;
 }
@@ -609,7 +614,8 @@ header {
     transition: all 0.3s;
     padding: 20px;
 }
-.instructors__overlay i{
+
+.instructors__overlay i {
     color: #0d369f;
     display: flex;
     justify-content: center;
@@ -627,10 +633,12 @@ header {
     transform: translate(0, 0);
     transition: all 0.3s;
 }
-.instructors__text{
+
+.instructors__text {
     margin-top: 10px;
 }
-.instructors__text h2{
+
+.instructors__text h2 {
     font-weight: 700px;
     color: #333;
     font-size: 18px;
@@ -638,19 +646,163 @@ header {
     cursor: pointer;
 }
 
-.instructors__text h2:hover{
+.instructors__text h2:hover {
     color: #ff6e65;
 }
-.instructors__text p{
+
+.instructors__text p {
     font-size: 12px;
 }
 
 /* contact */
-/* .contact__card{
+.contact__card {
     display: flex;
     align-items: center;
     justify-content: space-between;
-} */
+}
+
+.contact__text {
+    margin-top: 30px;
+}
+
+.contact__text h3 {
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 45px;
+    color: #333;
+}
+
+.contact__text p {
+    font-size: 16px;
+    line-height: 28px;
+    color: #707070;
+    ;
+    letter-spacing: .4px;
+}
+
+.contact span {
+    font-size: 16;
+    line-height: 28px;
+}
+
+.contact .contact-btn:hover {
+    background-color: #0d369f;
+    transition: all 0.3s;
+}
+
+
+/* FOOTER */
+footer {
+    position: relative;
+}
+
+.footer__info {
+    padding: 80px 0;
+    background: #060e1f;
+}
+
+.footer__form {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 50px;
+    border-radius: 10px;
+    background-color: #fff;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -100px;
+    box-shadow: 0px -1px 41px 0px rgb(21 22 23 / 8%);
+}
+
+.footer__title h2 {
+    font-size: 35px;
+    line-height: 40px;
+    color: #060606;
+    font-weight: 600;
+}
+
+.footer__title p {
+    font-size: 15px;
+    color: #707070;
+    letter-spacing: 1px;
+}
+
+.footer__input {
+    display: flex;
+}
+
+.footer__input input {
+    background: transparent;
+    padding: 15px 20px;
+    font-size: 16px;
+    color: #060606;
+    width: 100%;
+    border-radius: 8px 0px 0px 8px;
+    height: 55px;
+    border: 1px solid #eee;
+}
+
+.footer__form button {
+    background: #0d369f;
+    border: none;
+    color: #fff;
+    padding: 16px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 0 8px 8px 0;
+}
+
+.footer__text {
+    margin-top: 100px;
+    /* justify-content: space-between; */
+}
+
+.footer__item h6 {
+    color: #fff;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(23, 54, 88, 0.4);
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.footer__item ul li a,
+.footer__item p {
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0 0 10px 0;
+    display: block;
+}
+
+.bd-left {
+    border-left: 1px solid rgb(64 73 82 / 51%);
+}
+
+.social {
+    /* display: flex;
+    justify-content: space-between; */
+}
+
+.social i {
+    border-radius: 50%;
+    background-color: #151c2c;
+    width: 35px;
+    height: 35px;
+    line-height: 36px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.footer__copyright {
+    text-align: center;
+    background: #040a17;
+    padding: 20px 0;
+}
 
 
 
@@ -670,18 +822,25 @@ header {
 
 
 
+.backToTop {
+    width: 40px;
+    height: 40px;
+    background: #0d369f;
+    border-radius: 8px;
+    line-height: 50px;
+    text-align: center;
+    display: block;
+    position: fixed;
+    bottom: 90px;
+    right: 15px;
+    color: #fff;
+    transition: all .5s;
+    opacity: 0;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+.cd-top--is-visible {
+    opacity: 1;
+}
 
 /* RESPONSIVE */
 @media screen and (max-width:991.98px) {
@@ -719,6 +878,17 @@ header {
 
     .btn-mode-icon {
         display: block;
+        background-color: #161c2d;
+
+    }
+
+    .btn-mode-icon .fa-moon {
+        background-color: #fff;
+        padding: 10px;
+    }
+
+    .btn-mode-icon .fa-sun {
+        margin-right: 10px;
     }
 
     .navbar form {
@@ -745,12 +915,12 @@ header {
     }
 
 
+
     /* contact*/
 
-    /* .contact__card{
-        flex-direction: column;
-        align-content: center;
-    } */
+    .contact__card {
+        flex-wrap: wrap;
+    }
 
 
 
@@ -780,17 +950,158 @@ header {
         margin-bottom: 20px;
     }
 
-    /* Studious*/
-
-
-}
-
-@media (max-width: 576px) {
-    .carousel-inner .carousel-caption {
-        font-size: 30px;
-        line-height: 45px;
-        margin: -40px 80px;
-        width: 100%;
+    /* benefit */
+    .benefit__card {
+        justify-content: center;
     }
 
+    .mt4 {
+        margin-top: 25px;
+    }
+
+    /* .mg-both{
+        margin: 0 10px;
+    } */
+    .rightside-form {
+        flex-wrap: wrap;
+    }
+
+    .rightside-form button {
+        width: 100%;
+        margin-top: 10px;
+        padding: 15px 30px;
+        border-radius: 4px;
+    }
+
+    .footer__text {
+        margin-top: 250px;
+    }
+
+    .footer__item {
+        margin: 0 15px;
+    }
+
+    @media (max-width: 576px) {
+        .carousel-inner .carousel-caption {
+            font-size: 30px;
+            line-height: 45px;
+            margin: -40px 80px;
+            width: 100%;
+        }
+
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+    /* DARK MODE */
+
+    /* Light */
+    #myBody {
+        background-color: white;
+    }
+
+    .fa-sun {
+        display: none;
+    }
+
+    .fa-moon {
+        display: block;
+    }
+
+    /* Dark Theme*/
+    .dark#myBody {
+        background-color: #161c2d;
+        color: #b7b7b7;
+    }
+
+    .dark .fa-sun {
+        display: block;
+        color: #ff7971;
+        background-color: #161c2d;
+    }
+
+    .dark .fa-moon {
+        display: none;
+        color: white;
+    }
+
+    /* HEADER */
+    .dark header {
+        background-color: #161c2d;
+    }
+
+    /* NAV */
+    .dark .sub-nav,
+    .dark .rightside-form button,
+    .dark .navbar-toggler,
+    .dark .backToTop {
+        background-color: #4867b0;
+    }
+
+    .dark .navbar-brand span,
+    .dark #portNavbar a,
+    .dark .title h2,
+    .dark .dropdown-menu .dropdown-item,
+    .dark .studious__item h2,
+    .dark .signal span,
+    .dark .card-heading p,
+    .dark .benefit__info h3,
+    .dark .number__item p,
+    .dark .feedback__user p,
+    .dark .feedback__user,
+    .dark .instructors__text,
+    .dark .instructors__text h2,
+    .dark .contact__text h3,
+    .dark .footer__title h2 {
+        color: white;
+    }
+
+    .dark .studious__item i,
+    .dark .benefit__item i {
+        color: #4867b0;
+        background-color: #262c3d;
+    }
+
+    .dark .card-info,
+    .dark .dropdown-menu {
+        border-left: 1px solid rgba(255, 255, 255, 0.2);
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .dark .vote {
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .dark .footer__input input {
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .dark .card-info .color-text,
+    .dark .benefit__info p,
+    .dark .dmdtxt,
+    .dark .sub-test,
+    .dark .contact__text p,
+    .dark .footer__title p {
+        color: #b7b7b7;
+    }
+
+    .dark .benefit__item,
+    .dark .dropdown-menu,
+    .dark .footer__form {
+        background-color: #161c2d;
+    }
+
+    .dark .feedback__sub,
+    .dark .instructors__bg {
+        background-color: #161c2d;
+        box-shadow: 0 20px 62px hsla(222, 34%, 17%, 1);
+    }
