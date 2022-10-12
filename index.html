@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body id="myBody">
   <!-- Sub-nav -->
   <section class="sub-nav">
     <div class="contact">
@@ -64,8 +64,9 @@
           aria-controls="portNavbar" aria-expanded="true" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <button class="btn-mode-icon">
+        <button class="btn-mode-icon" id="switchButtonMobile">
           <i class="night-mode fa-regular fa-moon"></i>
+          <i class="night-mode fa-solid fa-sun"></i>
         </button>
       </div>
       <div class="collapse navbar-collapse" id="portNavbar">
@@ -103,10 +104,11 @@
           <button class="btn-search">
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
-          <button class="btn-mode">
-            <i class="night-mode fa-regular fa-moon"></i>
-          </button>
         </form>
+        <button class="btn-mode" id="switchButtonLaptop">
+          <i class="night-mode fa-regular fa-moon"></i>
+          <i class="night-mode fa-solid fa-sun"></i>
+        </button>
       </div>
     </nav>
   </header>
@@ -468,7 +470,7 @@
                 <p>Lorem ipsum dolor sit amet, dolor elit.</p>
               </div>
             </div>
-            <div class="benefit__item col-md-6 mt-md-0">
+            <div class="benefit__item col-md-6 mt-md-0 mt4">
               <i class="fa fa-download"></i>
               <div class="benefit__info">
                 <h3>Offline Mode</h3>
@@ -499,7 +501,8 @@
     <div class="container">
       <div class="title">
         <h2>Strength in <span>Numbers</span></h2>
-        <p>Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+        <p class="dmdtxt">Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+        </p>
       </div>
       <div class="number__content">
         <div class="row">
@@ -659,9 +662,100 @@
     </div>
   </section>
   <section class="contact section-pt">
-
+    <div class="container pb-5">
+      <div class="contact__content pb-5 mb-5">
+        <div class="contact__card">
+          <div class="col-lg-5 mb-lg-0  flex-grow-1 col-md-12  px-lg-2 text-center">
+            <img src="./img/image.png" alt="" class="m-auto">
+          </div>
+          <div class="contact__text col-lg-7 ps-lg-2 pe-lg-5">
+            <h3>Not Sure Where to Begin? <br>
+              Contact Now, We will Help you</h3>
+            <p>Consectetur adipiscing elit. Aliquam sit amet efficitur tortor.Uspendisse efficitur
+              orci urna. In et augue ornare, tempor massa in, luctus sapien.</p>
+            <div class="mt-4">
+              <button class="pink-btn">Contact Us</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
-  <footer></footer>
+  <footer>
+    <div class="footer__info ">
+      <div class="footer__form row">
+        <div class="footer__title col-md-6">
+          <h2 class="mb-lg-2">Subscribe Us to join our Community</h2>
+          <p>Newsletter</p>
+        </div>
+        <div class="footer__input col-md-6 mt-md-0 mt-4">
+          <form class="d-flex rightside-form" action="">
+            <input type="text" placeholder="Enter your email">
+            <button>Send</button>
+            </form>
+        </div>
+      </div>
+      <div class="container">
+        <div class="footer__text row">
+          <div class="footer__item col-lg-2 col-sm-6">
+            <h6>Quick links</h6>
+            <ul>
+              <li><a><span class="fa fa-angle-double-right mr-2"></span>Home</a>
+              </li>
+              <li><a><span class="fa fa-angle-double-right mr-2"></span>About</a>
+              </li>
+              <li><a><span class="fa fa-angle-double-right mr-2"></span>Courses</a></li>
+              <li><a><span class="fa fa-angle-double-right mr-2"></span>Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer__item col-lg-3 col-sm-6 pl-lg-5 mt-sm-0 mt-4">
+            <h6>HELP & SUPPORT</h6>
+            <ul>
+              <li><a><span class="fa fa-angle-double-right mr-2"></span>Live Chart</a>
+              </li>
+              <li><a><span class="fa fa-angle-double-right mr-2"></span>Faq</a>
+              </li>
+              <li><a><span class="fa fa-angle-double-right mr-2"></span>Support</a></li>
+              <li><a><span class="fa fa-angle-double-right mr-2"></span>Terms of Services</a></li>
+            </ul>
+          </div>
+          <div class="footer__item col-lg-3 col-sm-6 mt-lg-0 mt-sm-5 mt-4">
+            <h6>CONTACT</h6>
+            <ul>
+              <li><a><span class="fa-solid fa-envelope mr-2"></span>info@example.com</a>
+              </li>
+              <li><a><span class="fa fa-phone mr-2"></span>+44-000-888-999</a>
+              </li>
+              <li><a><span class="fa fa-map-marker mr-2"></span>London, 235 Terry, 10001</a></li>
+            </ul>
+          </div>
+          <div class="footer__item bd-left col-lg-4 col-sm-6 pl-lg-5 mt-lg-0 mt-sm-5 mt-4">
+            <h6>ABOUT</h6>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
+              rem
+              aperiam, eaque ipsa quae ab.</p>
+            <div class="social">
+              <i class="fa-brands fa-facebook mr-2"></i>
+              <i class="fa-brands fa-linkedin mr-2"></i>
+              <i class="fa-brands fa-twitter mr-2"></i>
+              <i class="fa-brands fa-google-plus mr-2"></i>
+              <i class="fa-brands fa-github mr-2"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__copyright">
+      <div class="container">
+        <p>@2021 Studious. All rights reserved. Design by <a href="https://w3layouts.com/" target="_blank"></a>
+          W3Layouts</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <a href="#" class="backToTop cd-top text-replace js-cd-top">
+    <i class="fa fa-level-up"></i>
+  </a>
 
   <!-- CDN JQUERY -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
@@ -686,6 +780,11 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
   </script>
+  <!-- BACK_TO_TOP -->
+  <script src="js/util.js"></script>
+  <script src="js/main.js"></script>
+  <!-- MAIN JS -->
+  <script src="js/mainJS.js"></script>
 
 </body>
 
