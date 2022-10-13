@@ -132,6 +132,20 @@ header {
 #portNavbar .nav-item.active .nav-link {
     color: #ff6e65;
 }
+.navbar-toggler-icon{
+    color: #fff;
+}
+.navbar-toggler-icon {
+    line-height: 30px;
+    display: inline-block;
+    width: 1.5em;
+    vertical-align: middle;
+    content: "";
+    background: 50%/100% 100% no-repeat;
+}
+.navbar-dark .navbar-toggler-icon{
+    background-image: none;
+}
 
 .navbar form {
     width: 230px;
@@ -158,7 +172,10 @@ header {
     top: 0;
     padding: 9px 12px 8px 2px;
 }
-
+.dropdown-menu a.dropdown-item:hover {
+    color: #ff6e65;
+    background: none;
+}
 .btn-search,
 .btn-mode-icon,
 .btn-mode {
@@ -837,6 +854,9 @@ footer {
     transition: all .5s;
     opacity: 0;
 }
+.backToTop:hover {
+    color: #fff;
+}
 
 .cd-top--is-visible {
     opacity: 1;
@@ -846,6 +866,13 @@ footer {
 @media screen and (max-width:991.98px) {
 
     /* NAV */
+    .navbar-icon.fa {
+        line-height: 1.2em;
+        color: red;
+        line-height: 30px;
+        background-color: #35a22c;
+        border-radius: 5px;
+    }
     .sub-nav {
         display: none;
     }
