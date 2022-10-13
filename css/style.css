@@ -172,9 +172,10 @@ header {
     top: 0;
     padding: 9px 12px 8px 2px;
 }
-.dropdown-menu a.dropdown-item:hover {
+#portNavbar .dropdown-menu .dropdown-item:hover {
     color: #ff6e65;
     background: none;
+    transition: all 0.4s;
 }
 .btn-search,
 .btn-mode-icon,
